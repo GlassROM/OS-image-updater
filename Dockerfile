@@ -24,7 +24,7 @@ RUN pacman-key --init && pacman-key --populate archlinux
 
 RUN pacman -Syyuu --noconfirm
 
-COPY --from=builder /hardened_malloc/out/libbardened_malloc.so /libhardened_malloc.so
+COPY --from=builder /hardened_malloc/out/libhardened_malloc.so /libhardened_malloc.so
 RUN mv libhardened_malloc.so $(cat /etc/ld.so.preload)
 
 RUN yes | pacman -Scc
