@@ -2,7 +2,7 @@ FROM ghcr.io/glassrom/os-image-docker@sha256:00e2ee3abde51393648d0c20ade232e7584
 
 RUN pacman-key --init && pacman-key --populate archlinux
 
-RUN pacman -Syyuu --noconfirm
+RUN pacman -Syyuu --noconfirm base-devel git
 
 WORKDIR /
 RUN git clone https://github.com/GlassROM/hardened_malloc.git --depth=1 --single-branch --branch=containers
