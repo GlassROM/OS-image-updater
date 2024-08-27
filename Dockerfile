@@ -12,7 +12,7 @@ RUN chown -R nobody:nobody /hardened_malloc
 USER nobody
 RUN make
 USER root
-RUN mv out/libhardened_malloc.so $(cat /etc/ld.so.preload)
+RUN cp -av out/libhardened_malloc.so $(cat /etc/ld.so.preload)
 
 RUN yes | pacman -Scc
 
