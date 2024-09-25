@@ -1,4 +1,4 @@
-FROM ghcr.io/glassrom/os-image-docker@sha256:00e2ee3abde51393648d0c20ade232e75840c90f9f750332f5aa45e066705dc3 AS builder
+FROM ghcr.io/glassrom/os-image-docker@sha256:4e08cc344fe97ef68986bb8fec0dc3fe86e48ebbd021b22961ee310dc08a3fbd AS builder
 
 RUN pacman-key --init && pacman-key --populate archlinux
 
@@ -18,7 +18,7 @@ RUN yes | pacman -Scc
 
 RUN rm -rvf /etc/pacman.d/gnupg
 
-FROM ghcr.io/glassrom/os-image-docker@sha256:00e2ee3abde51393648d0c20ade232e75840c90f9f750332f5aa45e066705dc3
+FROM ghcr.io/glassrom/os-image-docker@sha256:4e08cc344fe97ef68986bb8fec0dc3fe86e48ebbd021b22961ee310dc08a3fbd
 
 RUN pacman-key --init && pacman-key --populate archlinux
 
