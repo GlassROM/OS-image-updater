@@ -20,7 +20,7 @@ RUN yes | pacman -Scc
 
 RUN rm -rvf /etc/pacman.d/gnupg
 
-FROM ghcr.io/glassrom/os-image-docker@sha256:sha256:6d1a5fe5d41de028d3e7ca1a403862f3b9c6e189a1bedb5b4f062c400a18574b AS builder
+FROM ghcr.io/glassrom/os-image-docker@sha256:6d1a5fe5d41de028d3e7ca1a403862f3b9c6e189a1bedb5b4f062c400a18574b AS builder
 
 RUN pacman-key --init && pacman-key --populate archlinux
 
